@@ -19,7 +19,9 @@
             <li><?=  $book;?></li>
             <?php endforeach;?>
         
-        
+            <p>
+        <?= $books[1]?>
+    </p>
     </ul>
 </body>
 </html>

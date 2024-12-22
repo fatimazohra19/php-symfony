@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Demo</title>
-</head>
-<body>
-    <h1>Recommended Books</h1>
-    <?php
-    $books =[
-        "Do Androids Dream of Electric Sheep",
-        "The Langoliers",
-        "Hail Mary"
-    ];
+<?php
+$business=
+  [ 'name' => 'Laracasts',
+   'cost' => 15,
+   'categories'=>["Testing","PHP","Javascript"]
+
+];
+function register($user){
+
+}
+require "index.view.php";
     ?>
-    <p></p>
-</body>
-</html>
+   
