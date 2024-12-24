@@ -1,13 +1,6 @@
 <?php
-$business=
-  [ 'name' => 'Laracasts',
-   'cost' => 15,
-   'categories'=>["Testing","PHP","Javascript"]
+$heading  ='Contact Us';
 
-];
-function register($user){
-
-}
-require "contact.view.php";
+require "views/contact.view.php";
     ?>
    
