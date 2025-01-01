@@ -1,30 +1,16 @@
-<?php 
+<?php
+        require 'functions.php';
+        require 'Database.php';
 
-require 'functions.php';
+        $config=require('config.php') ;
+        $db=new Database($config['database']);
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+        $id=$_GET['id'];
+        $query="select*from posts where id= :id";
 
-$routes=[
-    '/' => 'controllers/index.php',
-    '/about' => 'controllers/about.php',
-    '/contact' => 'controllers/contact.php',
+      
 
-];
+        $posts=$db->query($query,[':id'=>$id])->fetch(); 
+        dd($posts); 
 
-
-function routeToController($uri,$routes){
-    if(array_key_exists($uri, $routes)){
-        require $routes[$uri];
-    }else{
-        abort();
-    }
-}
-function abort($code=404){
-
-    http_response_code( $code);
-    require "views/{$code}.php";
-    die();
-}
-
-
-routeToController($uri,$routes);
+ 
